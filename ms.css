@@ -1,4 +1,4 @@
-/* Layout: sticky header, split hero (copy + big hoodie), product grid with filters, fabric facts, size table, footer, slide-in cart. RTL. */
+
 :root{
   --bg:#EEF0F2;
   --surface:#FFFFFF;
@@ -44,7 +44,7 @@ button,select{font:inherit;color:inherit}
 .wrap{max-width:1120px;margin-inline:auto}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* header */
+
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:31;background:var(--bg);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:12px 24px;flex-wrap:wrap;padding-block:12px}
 .logo{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
@@ -57,7 +57,7 @@ button,select{font:inherit;color:inherit}
 .cart-btn i{font-style:normal;min-width:22px;height:22px;border-radius:99px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:.8rem;padding-inline:6px}
 @media (max-width:700px){.nav{order:3;width:100%;margin:0}}
 
-/* hero */
+
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:48px 56px}
 .eyebrow{font:700 .8rem/1 var(--font-display);letter-spacing:.14em;color:var(--accent)}
 .hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:900;margin-block:14px 16px}
@@ -75,7 +75,7 @@ button,select{font:inherit;color:inherit}
 .hero-art svg{width:82%;height:auto;position:relative;color:var(--accent);filter:drop-shadow(0 18px 24px rgba(0,0,0,.18))}
 @media (max-width:760px){.hero{grid-template-columns:1fr;padding-block:32px 40px}.hero-art{order:-1;aspect-ratio:4/3}.hero-art svg{width:56%}}
 
-/* sections */
+
 section{padding-block:40px}
 .sec-head{display:flex;flex-wrap:wrap;gap:16px;align-items:end;justify-content:space-between;margin-bottom:24px}
 .sec-head h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800}
@@ -84,7 +84,7 @@ section{padding-block:40px}
 .filters button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 16px;cursor:pointer;font-weight:500}
 .filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
-/* products */
+
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
 .art{background:var(--hero);aspect-ratio:1/1;display:grid;place-items:center;position:relative}
@@ -102,14 +102,14 @@ section{padding-block:40px}
 .price{font:800 1.25rem/1 var(--font-display);font-variant-numeric:tabular-nums}
 .buy .btn{padding:10px 16px}
 
-/* facts */
+
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
 .fact{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px}
 .fact strong{font:900 1.8rem/1.1 var(--font-display);color:var(--accent)}
 .fact h3{font-size:1.05rem;font-weight:700}
 .fact p{color:var(--muted);font-size:.95rem}
 
-/* sizes */
+
 .table-box{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:18px}
 table{border-collapse:collapse;width:100%;min-width:480px;font-variant-numeric:tabular-nums}
 th,td{padding:12px 16px;text-align:center;border-bottom:1px solid var(--line)}
@@ -118,7 +118,7 @@ tbody th{text-align:start;font-weight:700;color:var(--muted)}
 tbody tr:last-child>*{border-bottom:0}
 .note{color:var(--muted);font-size:.92rem;margin-top:12px}
 
-/* footer */
+
 footer{border-top:1px solid var(--line);margin-top:24px;padding-block:32px 40px}
 footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
 footer h3{font-size:1rem;font-weight:800;margin-bottom:8px}
@@ -126,7 +126,7 @@ footer p,footer li{color:var(--muted);font-size:.95rem}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
 
-/* cart */
+
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:40}
 .scrim.open{opacity:1;pointer-events:auto}
 .drawer{position:fixed;top:0;bottom:0;inset-inline-start:0;width:min(400px,100%);background:var(--surface);z-index:41;transform:translateX(100%);transition:transform .28s;display:flex;flex-direction:column;
